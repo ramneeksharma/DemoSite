@@ -42,8 +42,12 @@
 		<sec:intercept-url pattern="/account/**" access="ROLE_USER" requires-channel="https" />
 		<sec:intercept-url pattern="/checkout/**" requires-channel="https" />
 		<sec:intercept-url pattern="/confirmation/**" requires-channel="https" />
-		
-		<!-- Since the cart page is viewing as a modal, we want to allow it on any page -->
+
+        <!-- Spring Social endpoints -->
+        <sec:intercept-url pattern="/signin/**" requires-channel="https" />
+
+
+        <!-- Since the cart page is viewing as a modal, we want to allow it on any page -->
 		<sec:intercept-url pattern="/cart/**" requires-channel="any" />
 		
 		<!-- All URLs not explicitly specified as https will be served under http -->

@@ -92,6 +92,12 @@
 			</map>
 		</property>
 	</bean>
+
+    <bean class="org.springframework.social.connect.web.ProviderSignInController">
+        <property name="applicationUrl" value="${application.url}" />
+        <property name="signUpUrl" value="/register" />
+        <property name="signInUrl" value="/login" />
+    </bean>
 	
 	<!-- This validator will additionally require state on shipping addresses -->
 	<bean id="blShippingInfoFormValidator" class="org.broadleafcommerce.core.web.checkout.validator.USShippingInfoFormValidator" />

@@ -18,6 +18,7 @@ package com.mycompany.controller.account;
 
 import org.broadleafcommerce.common.exception.ServiceException;
 import org.broadleafcommerce.core.web.controller.account.BroadleafRegisterController;
+import org.broadleafcommerce.core.web.controller.account.BroadleafSocialRegisterController;
 import org.broadleafcommerce.profile.web.core.form.RegisterCustomerForm;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -34,7 +35,7 @@ import javax.servlet.http.HttpServletResponse;
  */
 @Controller
 @RequestMapping("/register")
-public class RegisterController extends BroadleafRegisterController {
+public class RegisterController extends BroadleafSocialRegisterController {
 	
 	@RequestMapping(method=RequestMethod.GET)
 	public String register(HttpServletRequest request, HttpServletResponse response, Model model,
