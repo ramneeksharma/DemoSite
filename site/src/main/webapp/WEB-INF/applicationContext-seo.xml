@@ -17,10 +17,9 @@
         http://www.springframework.org/schema/tx/spring-tx-3.1.xsd
         http://www.springframework.org/schema/aop
         http://www.springframework.org/schema/aop/spring-aop-3.1.xsd">
-        
-        <!-- This file will contain bean overrides for extensions of Broadleaf entities -->
-        <!-- For example, if you have a custom class that extends CustomerImpl, you would note that here -->
-        <bean id="org.broadleafcommerce.core.catalog.domain.Category" class="com.mycompany.catalog.domain.MyCategoryImpl" scope="prototype" />
-        <bean id="org.broadleafcommerce.core.catalog.domain.Product" class="com.mycompany.catalog.domain.MyProductImpl" scope="prototype" />
 
+
+        <!--<bean id="org.broadleafcommerce.core.catalog.domain.Category" class="com.mycompany.catalog.domain.MyCategoryImpl" />-->
+        <!--<bean id="org.broadleafcommerce.core.catalog.domain.Product" class="com.mycompany.catalog.domain.MyProductImpl" />-->
+	
 </beans>

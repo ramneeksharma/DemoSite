@@ -5,8 +5,10 @@
              version="2.0">
              
     <persistence-unit name="blPU" transaction-type="RESOURCE_LOCAL">
-		<non-jta-data-source>jdbc/web</non-jta-data-source>
-		<exclude-unlisted-classes/>
+        <non-jta-data-source>jdbc/web</non-jta-data-source>
+        <class>com.mycompany.catalog.domain.MyCategoryImpl</class>
+        <class>com.mycompany.catalog.domain.MyProductImpl</class>
+        <exclude-unlisted-classes/>
 	</persistence-unit>
 	
 	<persistence-unit name="blSecurePU" transaction-type="RESOURCE_LOCAL">
