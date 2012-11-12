@@ -241,7 +241,7 @@
 			</dependency>
             <dependency>
                 <groupId>org.broadleafcommerce</groupId>
-                <artifactId>blc-seo</artifactId>
+                <artifactId>broadleaf-seo</artifactId>
                 <version>1.0.0-SNAPSHOT</version>
                 <type>jar</type>
                 <scope>compile</scope>
