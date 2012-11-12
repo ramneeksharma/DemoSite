@@ -5,16 +5,8 @@
 <!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
 
 <blc:head   pageTitle="${#strings.isEmpty(category.titleFragment) ? category.name + ' - Broadleaf Demo - Heat Clinic' : category.titleFragment}"
-
-            metaDescription="${category.metaDescription}"
-            metaKeywords="${category.metaKeywords}"
-            metaRobot="${category.metaRobot}"
-            twitterCard="${category.twitterCard}" twitterUrl="${category.twitterUrl}" twitterTitle="${category.twitterTitle}"
-            twitterDescription="${category.twitterDescription}" twitterImage="${category.twitterImage}"
+            seoMetaData="${category.seoMetaData}" twitterData="${category.twitterData}"
 />
-
-<!--seoMetaData="${category}"-->
-<!--twitterData="${category}"-->
 
 <body>
 	<div id="notification_bar"></div>

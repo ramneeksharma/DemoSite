@@ -22,7 +22,7 @@ INSERT INTO BLC_CATEGORY (CATEGORY_ID,DESCRIPTION,NAME,URL,DEFAULT_PARENT_CATEGO
 
 -- Adding to MyCategoryImpl
 -- --Including SEO properties
-INSERT INTO SEO_CATEGORY (CATEGORY_ID, META_DESCRIPTION, META_KEYWORDS, META_ROBOT, TITLE_FRAGMENT) VALUES (2002,'Heat Clinic Hot Sauces','hot, sauce, heat, peppers','INDEX,FOLLOW','Hot Sauces - Broadleaf Demo - Heat Clinic')
+INSERT INTO SEO_CATEGORY (CATEGORY_ID, META_DESCRIPTION, META_KEYWORDS, META_ROBOT, TITLE_FRAGMENT, TWITTER_CARD, TWITTER_URL, TWITTER_TITLE, TWITTER_DESCRIPTION, TWITTER_IMAGE) VALUES (2002,'Heat Clinic Hot Sauces','hot, sauce, heat, peppers','INDEX,FOLLOW','Hot Sauces - Broadleaf Demo - Heat Clinic','summary','https://heat-clinic.com/hot-sauces', 'Heat Clinic Hot Sauces', 'The best hot sauces you can find', 'https://heat-clinic.com/hot.png')
 INSERT INTO SEO_CATEGORY (CATEGORY_ID, META_DESCRIPTION, META_KEYWORDS, META_ROBOT, TITLE_FRAGMENT) VALUES (2003,'Heat Clinic Merchandise','hot, peppers, shirts, t-shirts, all sizes','INDEX,FOLLOW','Merchandise - Broadleaf Demo - Heat Clinic')
 INSERT INTO SEO_CATEGORY (CATEGORY_ID, META_DESCRIPTION, META_KEYWORDS, TITLE_FRAGMENT) VALUES (2004,'Heat Clinic Clearence Sale', 'cleareance, sale, act now, offer', 'Clearance - Broadleaf Demo - Heat Clinic')
 --

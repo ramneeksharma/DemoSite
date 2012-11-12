@@ -7,17 +7,7 @@
 	<title th:if="${pageTitle == 'TEMPLATE'}" th:remove="tag">
 		<title th:inline="text" th:include="${templateName} :: title" />
 	</title>
-
-	<meta name="description" th:content="${#strings.isEmpty(metaDescription) ? 'Broadleaf Demo Store' : metaDescription}" />
-	<meta name="author" content="Broadleaf Commerce" />
-	<meta name="keywords" th:content="${#strings.isEmpty(metaKeywords) ? '' : metaKeywords}" />
-	<meta name="robot" th:content="${#strings.isEmpty(metaRobot) ? 'INDEX,FOLLOW' : metaRobot}" />
-
-    <meta name="twitter:card" th:content="${twitterCard}" />
-    <meta name="twitter:url" th:content="${twitterUrl}" />
-    <meta name="twitter:title" th:content="${twitterDescription}" />
-    <meta name="twitter:description" th:content="${twitterDescription}" />
-    <meta name="twitter:image" th:content="${twitterImage}" />
+    <meta name="author" content="Broadleaf Commerce" />
 
 	<meta content='width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;' name='viewport' />
 	<meta name="viewport" content="width=device-width" />
@@ -26,7 +16,8 @@
 	<link rel="stylesheet" th:href="@{/css/style.css}" />
 	<link rel="stylesheet" th:unless="${#strings.isEmpty(additionalCss)}" />
 
-    <seo:twittercard twitterCard="${twitterCard}" twitterUrl="${twitterUrl}" twitterTitle="${twitterTitle}" twitterDescription="${twitterDescription}" twitterImage="${twitterImage}" />
+    <seo:seometadata seoMetaData="${seoMetaData}" />
+    <seo:twitterdata twitterData="${twitterData}" />
 
 	<script src="../../js/libs/modernizr-2.5.3.min.js" th:src="@{/js/libs/modernizr-2.5.3.min.js}"></script>
 </head>
