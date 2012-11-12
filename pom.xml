@@ -11,6 +11,7 @@
 	<url>http://www.blc-archetype.com</url>
 	<properties>
 		<blc.version>2.2.0-SNAPSHOT</blc.version>
+		<blc.pricelist.version>1.0.0-SNAPSHOT</blc.pricelist.version>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<gwt.version>2.4.0</gwt.version>
 	</properties>
@@ -239,6 +240,13 @@
 				<classifier>tests</classifier>
 				<scope>test</scope>
 			</dependency>
+			<dependency>
+				<groupId>org.broadleafcommerce</groupId>
+				<artifactId>broadleaf-pricelist</artifactId>
+				<version>${blc.pricelist.version}</version>
+				<type>jar</type>
+				<scope>compile</scope>
+			</dependency>
 
 			<!-- Other dependencies -->
 			<dependency>
@@ -341,6 +349,6 @@
 		<module>admin</module>
 		<module>core</module>
 		<module>site</module>
-        	<module>combined</module>
-    	</modules>
+<!--         <module>combined</module> -->
+    </modules>
 </project>

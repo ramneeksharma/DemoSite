@@ -81,7 +81,6 @@
     </bean>
     <bean id="blSearchService" class="org.broadleafcommerce.core.search.service.solr.SolrSearchServiceImpl">
     	<constructor-arg name="solrServer" ref="${solr.source}" />
-        <property name="indexPriceLists" value="true" />
     </bean> 
    	<bean id="rebuildIndexJobDetail" class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean">
 	  	<property name="targetObject" ref="blSearchService" />
@@ -140,5 +139,45 @@
 		<property name="characterEncoding" value="UTF-8" />
 	</bean>
 	-->
+    
+    <bean id="blUpdateCartServiceExtensionManager" class="org.broadleafcommerce.core.web.service.UpdateCartServiceExtensionManager">
+        <property name="listeners">
+            <list>
+                <bean class="org.broadleafcommerce.pricelist.extension.PriceListUpdateCartServiceExtensionListener" />
+            </list>
+        </property>
+    </bean>
+    
+    <bean id="blSolrSearchServiceExtensionManager" class="org.broadleafcommerce.core.search.service.solr.SolrSearchServiceExtensionManager">
+        <property name="listeners">
+            <list>
+                <bean class="org.broadleafcommerce.pricelist.extension.PriceListSolrSearchServiceExtensionListener" />
+            </list>
+        </property>
+    </bean>
+    
+    <bean id="blOrderServiceExtensionManager" class="org.broadleafcommerce.core.order.service.OrderServiceExtensionManager">
+        <property name="listeners">
+            <list>
+                <bean class="org.broadleafcommerce.pricelist.extension.PriceListOrderServiceExtensionListener" />
+            </list>
+        </property>
+    </bean>
+    
+    <bean id="blOrderDaoExtensionManager" class="org.broadleafcommerce.core.order.dao.OrderDaoExtensionManager">
+        <property name="listeners">
+            <list>
+                <bean class="org.broadleafcommerce.pricelist.extension.PriceListOrderDaoExtensionListener" />
+            </list>
+        </property>
+    </bean>
+    
+    <bean id="blOfferServiceExtensionManager" class="org.broadleafcommerce.core.offer.service.OfferServiceExtensionManager">
+        <property name="listeners">
+            <list>
+                <bean class="org.broadleafcommerce.pricelist.extension.PriceListOfferServiceExtensionListener" />
+            </list>
+        </property>
+    </bean>
 	
 </beans>
