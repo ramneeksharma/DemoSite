@@ -276,5 +276,9 @@
 			<groupId>javax.validation</groupId>
 			<artifactId>validation-api</artifactId>
 		</dependency>
+			<dependency>
+			<groupId>org.broadleafcommerce</groupId>
+			<artifactId>broadleaf-pricelist</artifactId>
+		</dependency>
 	</dependencies>
 </project>
