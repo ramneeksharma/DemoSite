@@ -5,10 +5,7 @@
 <!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
 
 <blc:head   pageTitle="${#strings.isEmpty(product.titleFragment) ? product.name + ' - Broadleaf Demo - Heat Clinic' : product.titleFragment}"
-            metaDescription="${product.metaDescription}"
-            metaKeywords="${product.metaKeywords}"
-            metaRobot="${product.metaRobot}"/>
-
+            seoData="${product}" />
 <body>
 	<div id="notification_bar"></div>
 	<header th:substituteby="layout/partials/header" />
