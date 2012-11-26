@@ -18,7 +18,7 @@ package com.mycompany.domain;
 
 import org.broadleafcommerce.core.catalog.domain.ProductOptionValue;
 import org.broadleafcommerce.core.catalog.domain.ProductOptionValueImpl;
-import org.broadleafcommerce.core.pricing.domain.PriceAdjustment;
+import org.broadleafcommerce.pricelist.domain.PriceAdjustment;
 import org.broadleafcommerce.pricelist.domain.catalog.PriceListProductOptionValue;
 import org.broadleafcommerce.pricelist.domain.catalog.PriceListProductOptionValueImpl;
 

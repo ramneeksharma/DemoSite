@@ -18,7 +18,7 @@ package com.mycompany.domain;
 
 import org.broadleafcommerce.core.catalog.domain.Sku;
 import org.broadleafcommerce.core.catalog.domain.SkuImpl;
-import org.broadleafcommerce.core.pricing.domain.PriceData;
+import org.broadleafcommerce.pricelist.domain.PriceData;
 import org.broadleafcommerce.pricelist.domain.catalog.PriceListSku;
 import org.broadleafcommerce.pricelist.domain.catalog.PriceListSkuImpl;
 
