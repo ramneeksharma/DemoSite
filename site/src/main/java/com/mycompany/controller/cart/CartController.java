@@ -18,7 +18,6 @@ package com.mycompany.controller.cart;
 
 
 import org.broadleafcommerce.core.catalog.domain.Product;
-import org.broadleafcommerce.core.inventory.exception.InventoryUnavailableException;
 import org.broadleafcommerce.core.order.service.exception.AddToCartException;
 import org.broadleafcommerce.core.order.service.exception.RemoveFromCartException;
 import org.broadleafcommerce.core.order.service.exception.RequiredAttributeNotProvidedException;
@@ -27,6 +26,7 @@ import org.broadleafcommerce.core.pricing.service.exception.PricingException;
 import org.broadleafcommerce.core.web.controller.cart.BroadleafCartController;
 import org.broadleafcommerce.core.web.order.CartState;
 import org.broadleafcommerce.core.web.order.model.AddToCartItem;
+import org.broadleafcommerce.inventory.exception.InventoryUnavailableException;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ModelAttribute;
@@ -37,6 +37,7 @@ import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+
 import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
@@ -45,7 +46,8 @@ import java.util.Map;
 @RequestMapping("/cart")
 public class CartController extends BroadleafCartController {
 	
-	@RequestMapping("")
+	@Override
+    @RequestMapping("")
 	public String cart(HttpServletRequest request, HttpServletResponse response, Model model) throws PricingException {
 		return super.cart(request, response, model);
 	}
@@ -113,37 +115,46 @@ public class CartController extends BroadleafCartController {
 
         try {
             return super.updateQuantity(request, response, model, addToCartItem);
-        } catch (InventoryUnavailableException e) {
+        } catch (UpdateCartException e) {
+            String errorMessage = "There was a problem updating the item";
+            if (e.getCause() instanceof InventoryUnavailableException) {
+                errorMessage = "Not enough inventory to fulfill your requested amount of " + addToCartItem.getQuantity();
+            }
+            
             if (isAjaxRequest(request)) {
-                model.addAttribute("errorMessage", "Not enough inventory to fulfill your requested amount of " + addToCartItem.getQuantity());
+                model.addAttribute("errorMessage", errorMessage);
                 return getCartView();
             } else {
-                redirectAttributes.addAttribute("errorMessage", "Not enough inventory to fulfill your requested amount of " + addToCartItem.getQuantity());
+                redirectAttributes.addAttribute("errorMessage", errorMessage);
                 return getCartPageRedirect();
             }
         }
 	}
 	
-	@RequestMapping("/remove")
+	@Override
+    @RequestMapping("/remove")
 	public String remove(HttpServletRequest request, HttpServletResponse response, Model model,
 			@ModelAttribute("addToCartItem") AddToCartItem addToCartItem) throws IOException, PricingException, RemoveFromCartException {
 		return super.remove(request, response, model, addToCartItem);
 	}
 	
-	@RequestMapping("/empty")
+	@Override
+    @RequestMapping("/empty")
 	public String empty(HttpServletRequest request, HttpServletResponse response, Model model) throws PricingException {
 		//return super.empty(request, response, model);
 		return "ajaxredirect:/";
 		
 	}
 	
-	@RequestMapping("/promo")
+	@Override
+    @RequestMapping("/promo")
 	public String addPromo(HttpServletRequest request, HttpServletResponse response, Model model,
 			@RequestParam("promoCode") String customerOffer) throws IOException, PricingException {
 		return super.addPromo(request, response, model, customerOffer);
 	}
 	
-	@RequestMapping("/promo/remove")
+	@Override
+    @RequestMapping("/promo/remove")
 	public String removePromo(HttpServletRequest request, HttpServletResponse response, Model model,
 			@RequestParam("offerCodeId") Long offerCodeId) throws IOException, PricingException {
 		return super.removePromo(request, response, model, offerCodeId);
