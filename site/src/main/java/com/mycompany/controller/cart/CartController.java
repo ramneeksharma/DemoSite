@@ -116,6 +116,11 @@ public class CartController extends BroadleafCartController {
         try {
             return super.updateQuantity(request, response, model, addToCartItem);
         } catch (UpdateCartException e) {
+            //Necessary because the transaction rolls back and detaches the order from the session. In order to avoid
+            //LazyInitializationExceptions on the frontend, we need to lookup the Order again from Hibernate that has
+            //an active session
+            CartState.setCart(orderService.findOrderById(CartState.getCart().getId()));
+            
             String errorMessage = "There was a problem updating the item";
             if (e.getCause() instanceof InventoryUnavailableException) {
                 errorMessage = "Not enough inventory to fulfill your requested amount of " + addToCartItem.getQuantity();
