@@ -19,7 +19,8 @@ package com.mycompany.domain;
 import org.broadleafcommerce.pricelist.domain.PriceList;
 import org.broadleafcommerce.pricelist.domain.customer.PriceListCustomer;
 import org.broadleafcommerce.pricelist.domain.customer.PriceListCustomerImpl;
-import org.broadleafcommerce.pricelist.domain.order.PriceListOrderImpl;
+import org.broadleafcommerce.profile.core.domain.Customer;
+import org.broadleafcommerce.profile.core.domain.CustomerImpl;
 
 import javax.persistence.Embedded;
 import javax.persistence.Entity;
@@ -30,7 +31,7 @@ import javax.persistence.Entity;
  * @author Priyesh Patel
  */
 @Entity
-public class MyCustomerImpl extends org.broadleafcommerce.profile.core.domain.CustomerImpl implements org.broadleafcommerce.profile.core.domain.Customer,PriceListCustomer {
+public class MyCustomerImpl extends CustomerImpl implements Customer,PriceListCustomer {
     private static final long serialVersionUID = -1849002347743308131L;
     
     @Embedded
