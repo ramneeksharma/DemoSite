@@ -7,6 +7,7 @@
     <persistence-unit name="blPU" transaction-type="RESOURCE_LOCAL">
 		<non-jta-data-source>jdbc/web</non-jta-data-source>
         <class>com.mycompany.domain.MyOfferImpl</class>
+        <class>com.mycompany.domain.MyCustomerImpl</class>
         <class>com.mycompany.domain.MyOrderImpl</class>
         <class>com.mycompany.domain.MyProductOptionValueImpl</class>
         <class>com.mycompany.domain.MySearchFacetRangeImpl</class>

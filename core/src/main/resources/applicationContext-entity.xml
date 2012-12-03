@@ -25,6 +25,7 @@
 	<bean id="org.broadleafcommerce.core.catalog.domain.Sku" class="com.mycompany.domain.MySkuImpl" scope="prototype"/>
 	<bean id="org.broadleafcommerce.core.order.domain.Order" class="com.mycompany.domain.MyOrderImpl" scope="prototype"/>
 	<bean id="org.broadleafcommerce.core.offer.domain.Offer" class="com.mycompany.domain.MyOfferImpl" scope="prototype"/>
+	<bean id="org.broadleafcommerce.core.offer.domain.Customer" class="com.mycompany.domain.MyCustomerImpl" scope="prototype"/>
 	<bean id="org.broadleafcommerce.core.search.domain.SearchFacetRange" class="com.mycompany.domain.MySearchFacetRangeImpl" scope="prototype"/>
         
 </beans>
