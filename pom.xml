@@ -211,6 +211,13 @@
 				<type>jar</type>
 				<scope>compile</scope>
 			</dependency>
+					<dependency>
+				<groupId>org.broadleafcommerce</groupId>
+				<artifactId>broadleaf-advanced-offer</artifactId>
+				<version>1.0.0-SNAPSHOT</version>
+				<type>jar</type>
+				<scope>compile</scope>
+			</dependency>
 			<dependency>
 				<groupId>org.broadleafcommerce</groupId>
 				<artifactId>broadleaf-admin-module</artifactId>

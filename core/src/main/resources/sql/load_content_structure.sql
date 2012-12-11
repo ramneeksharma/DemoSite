@@ -25,12 +25,6 @@ INSERT INTO BLC_LOCALE (LOCALE_CODE, DEFAULT_FLAG, FRIENDLY_NAME, CURRENCY_CODE)
 INSERT INTO BLC_LOCALE (LOCALE_CODE, DEFAULT_FLAG, FRIENDLY_NAME, CURRENCY_CODE) VALUES ('en', FALSE, 'English', 'USD');
 
 --
--- Load price lists:  Your site will need to define 'price list data' populated with the prices. This demo has based
--- the price lists on currencies, but your site could use areas (zip codes, etc) to define lists.
---
-INSERT INTO BLC_PRICE_LIST (PRICE_LIST_ID,CURRENCY_CODE,FRIENDLY_NAME,PRICE_KEY,USE_DEFAULT_FLAG) VALUES (1,'USD','US Dollar','USD',true);
-
---
 -- The following items create page templates.   The key is to map a JSP template (TMPLT_PATH) to
 -- a LOCALE_CODE.   In the example below, there is only one JSP template "basic".   The full
 -- path to the template is .../WEB_INF/jsp/templates/basic.jsp.

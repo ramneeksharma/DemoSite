@@ -138,5 +138,10 @@
 			<groupId>commons-dbcp</groupId>
 			<artifactId>commons-dbcp</artifactId>
 		</dependency>
+				 <dependency>
+        <groupId>org.broadleafcommerce</groupId>
+        <artifactId>broadleaf-advanced-offer</artifactId>
+    </dependency>
+		
 	</dependencies>
 </project>
