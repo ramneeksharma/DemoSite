@@ -115,10 +115,6 @@
 			<artifactId>broadleaf-framework-web</artifactId>
 		</dependency>
 		<dependency>
-			<groupId>org.broadleafcommerce</groupId>
-			<artifactId>broadleaf-pricelist</artifactId>
-		</dependency>
-		<dependency>
 			<groupId>org.hsqldb</groupId>
 			<artifactId>hsqldb</artifactId>
 		</dependency>
