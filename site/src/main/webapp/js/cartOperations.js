@@ -28,8 +28,13 @@ $(function(){
 	
 	// This will change the header "X item(s)" text to the new count and pluralization of "item"
 	function updateHeaderCartItemsCount(newCount) {
+
+        //Pull the word that was set in the html from the internationalized version from the locale
+        var singularItem = $('span#headerCartItemWordSingluar_i18n').text();
+        var plurarlItem = $('span#headerCartItemWordPlural_i18n').text();
+
 		$('.headerCartItemsCount').html(newCount);
-		$('.headerCartItemsCountWord').html((newCount == 1) ? ' item' : ' items');
+		$('.headerCartItemsCountWord').html((newCount == 1) ? singularItem: plurarlItem);
 	}
 	
 	function updateWithPromo(promo) {
@@ -99,12 +104,7 @@ $(function(){
 						if (data.error == 'allOptionsRequired') {
 							$errorSpan.css('display', 'block');
 					        $errorSpan.effect('highlight', {}, 1000);
-						} else if (data.error == 'inventoryUnavailable') {
-                            var $errorMessage = $('.error.errorMessage');
-                            $errorMessage.text('This item is no longer in stock. We apologize for the inconvenience.');
-                            $errorMessage.show();
-                            $errorMessage.effect('highlight', {}, 1000);
-                        } else {
+						} else {
 							HC.showNotification("Error adding to cart");
 						}
 					} else {
