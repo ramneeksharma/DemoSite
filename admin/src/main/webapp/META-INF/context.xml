@@ -17,10 +17,10 @@
               logAbandoned="true"
               minEvictableIdleTimeMillis="30000"
               jdbcInterceptors="org.apache.tomcat.jdbc.pool.interceptor.ConnectionState;org.apache.tomcat.jdbc.pool.interceptor.StatementFinalizer"
-              username="sa"
+              username="root"
               password=""
-              driverClassName="org.hsqldb.jdbcDriver"
-              url="jdbc:hsqldb:hsql://localhost/broadleaf"/>
+              driverClassName="com.mysql.jdbc.Driver"
+              url="jdbc:mysql://localhost:3306/broadleafcommerce"/>
 
     <Resource name="jdbc/storage"
               auth="Container"
@@ -39,10 +39,10 @@
               logAbandoned="true"
               minEvictableIdleTimeMillis="30000"
               jdbcInterceptors="org.apache.tomcat.jdbc.pool.interceptor.ConnectionState;org.apache.tomcat.jdbc.pool.interceptor.StatementFinalizer"
-              username="sa"
+              username="root"
               password=""
-              driverClassName="org.hsqldb.jdbcDriver"
-              url="jdbc:hsqldb:hsql://localhost/broadleaf"/>
+              driverClassName="com.mysql.jdbc.Driver"
+              url="jdbc:mysql://localhost:3306/broadleafcommerce"/>
 
     <Resource name="jdbc/secure"
               auth="Container"
@@ -61,8 +61,8 @@
               logAbandoned="true"
               minEvictableIdleTimeMillis="30000"
               jdbcInterceptors="org.apache.tomcat.jdbc.pool.interceptor.ConnectionState;org.apache.tomcat.jdbc.pool.interceptor.StatementFinalizer"
-              username="sa"
+              username="root"
               password=""
-              driverClassName="org.hsqldb.jdbcDriver"
-              url="jdbc:hsqldb:hsql://localhost/broadleaf"/>
+              driverClassName="com.mysql.jdbc.Driver"
+              url="jdbc:mysql://localhost:3306/broadleafcommerce"/>
 </Context>
