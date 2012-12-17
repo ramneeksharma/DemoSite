@@ -10,7 +10,7 @@
     <inherits name="com.google.gwt.i18n.I18N"/>
     <inherits name="org.broadleafcommerce.openadmin.theme.broadleaf.Broadleaf"/>
     <inherits name="com.google.gwt.precompress.Precompress"/>
-	    <inherits  name="org.broadleafcommerce.admin.client.advancedOfferModule" /> 
+	    <inherits  name="com.broadleafcommerce.admin.client.advancedOfferModule" /> 
 	
 
 	<extend-property name="locale" values="en_US"/>

@@ -16,11 +16,12 @@
 
 package com.mycompany.domain;
 
-import org.broadleafcommerce.advancedoffer.domain.offer.AdvancedOfferImpl;
 import org.broadleafcommerce.core.offer.domain.AdvancedOffer;
 import org.broadleafcommerce.core.offer.domain.Offer;
 import org.broadleafcommerce.core.offer.domain.OfferImpl;
 import org.broadleafcommerce.core.offer.domain.OfferTier;
+
+import com.broadleafcommerce.advancedoffer.domain.offer.AdvancedOfferImpl;
 
 import javax.persistence.Embedded;
 import javax.persistence.Entity;
