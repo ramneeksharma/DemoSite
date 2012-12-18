@@ -18,9 +18,10 @@ package com.mycompany.domain;
 
 import org.broadleafcommerce.core.search.domain.SearchFacetRange;
 import org.broadleafcommerce.core.search.domain.SearchFacetRangeImpl;
-import org.broadleafcommerce.pricelist.domain.PriceList;
-import org.broadleafcommerce.pricelist.domain.search.PriceListSearchFacetRange;
-import org.broadleafcommerce.pricelist.domain.search.PriceListSearchFacetRangeImpl;
+
+import com.broadleafcommerce.pricelist.domain.PriceList;
+import com.broadleafcommerce.pricelist.domain.search.PriceListSearchFacetRange;
+import com.broadleafcommerce.pricelist.domain.search.PriceListSearchFacetRangeImpl;
 
 import javax.persistence.Embedded;
 import javax.persistence.Entity;

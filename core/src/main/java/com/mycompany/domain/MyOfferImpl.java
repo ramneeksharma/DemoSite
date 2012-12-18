@@ -18,9 +18,10 @@ package com.mycompany.domain;
 
 import org.broadleafcommerce.core.offer.domain.Offer;
 import org.broadleafcommerce.core.offer.domain.OfferImpl;
-import org.broadleafcommerce.pricelist.domain.offer.OfferRestrictedPriceList;
-import org.broadleafcommerce.pricelist.domain.offer.PriceListOffer;
-import org.broadleafcommerce.pricelist.domain.offer.PriceListOfferImpl;
+
+import com.broadleafcommerce.pricelist.domain.offer.OfferRestrictedPriceList;
+import com.broadleafcommerce.pricelist.domain.offer.PriceListOffer;
+import com.broadleafcommerce.pricelist.domain.offer.PriceListOfferImpl;
 
 import javax.persistence.Embedded;
 import javax.persistence.Entity;

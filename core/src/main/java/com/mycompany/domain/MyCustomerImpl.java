@@ -16,11 +16,12 @@
 
 package com.mycompany.domain;
 
-import org.broadleafcommerce.pricelist.domain.PriceList;
-import org.broadleafcommerce.pricelist.domain.customer.PriceListCustomer;
-import org.broadleafcommerce.pricelist.domain.customer.PriceListCustomerImpl;
 import org.broadleafcommerce.profile.core.domain.Customer;
 import org.broadleafcommerce.profile.core.domain.CustomerImpl;
+
+import com.broadleafcommerce.pricelist.domain.PriceList;
+import com.broadleafcommerce.pricelist.domain.customer.PriceListCustomer;
+import com.broadleafcommerce.pricelist.domain.customer.PriceListCustomerImpl;
 
 import javax.persistence.Embedded;
 import javax.persistence.Entity;

@@ -18,9 +18,10 @@ package com.mycompany.domain;
 
 import org.broadleafcommerce.core.order.domain.Order;
 import org.broadleafcommerce.core.order.domain.OrderImpl;
-import org.broadleafcommerce.pricelist.domain.PriceList;
-import org.broadleafcommerce.pricelist.domain.order.PriceListOrder;
-import org.broadleafcommerce.pricelist.domain.order.PriceListOrderImpl;
+
+import com.broadleafcommerce.pricelist.domain.PriceList;
+import com.broadleafcommerce.pricelist.domain.order.PriceListOrder;
+import com.broadleafcommerce.pricelist.domain.order.PriceListOrderImpl;
 
 import javax.persistence.Embedded;
 import javax.persistence.Entity;

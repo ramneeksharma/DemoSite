@@ -18,9 +18,10 @@ package com.mycompany.domain;
 
 import org.broadleafcommerce.core.catalog.domain.SkuBundleItem;
 import org.broadleafcommerce.core.catalog.domain.SkuBundleItemImpl;
-import org.broadleafcommerce.pricelist.domain.SkuBundleItemPriceData;
-import org.broadleafcommerce.pricelist.domain.catalog.PriceListSkuBundleItem;
-import org.broadleafcommerce.pricelist.domain.catalog.PriceListSkuBundleItemImpl;
+
+import com.broadleafcommerce.pricelist.domain.SkuBundleItemPriceData;
+import com.broadleafcommerce.pricelist.domain.catalog.PriceListSkuBundleItem;
+import com.broadleafcommerce.pricelist.domain.catalog.PriceListSkuBundleItemImpl;
 
 import javax.persistence.Embedded;
 import javax.persistence.Entity;

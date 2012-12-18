@@ -241,7 +241,7 @@
 				<scope>test</scope>
 			</dependency>
 			<dependency>
-				<groupId>org.broadleafcommerce</groupId>
+				<groupId>com.broadleafcommerce</groupId>
 				<artifactId>broadleaf-pricelist</artifactId>
 				<version>${blc.pricelist.version}</version>
 				<type>jar</type>

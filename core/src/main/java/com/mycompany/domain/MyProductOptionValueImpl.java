@@ -18,9 +18,10 @@ package com.mycompany.domain;
 
 import org.broadleafcommerce.core.catalog.domain.ProductOptionValue;
 import org.broadleafcommerce.core.catalog.domain.ProductOptionValueImpl;
-import org.broadleafcommerce.pricelist.domain.PriceAdjustment;
-import org.broadleafcommerce.pricelist.domain.catalog.PriceListProductOptionValue;
-import org.broadleafcommerce.pricelist.domain.catalog.PriceListProductOptionValueImpl;
+
+import com.broadleafcommerce.pricelist.domain.PriceAdjustment;
+import com.broadleafcommerce.pricelist.domain.catalog.PriceListProductOptionValue;
+import com.broadleafcommerce.pricelist.domain.catalog.PriceListProductOptionValueImpl;
 
 import javax.persistence.Embedded;
 import javax.persistence.Entity;

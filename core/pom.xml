@@ -43,7 +43,7 @@
 			<artifactId>broadleaf-profile</artifactId>
 		</dependency>
 				<dependency>
-			<groupId>org.broadleafcommerce</groupId>
+			<groupId>com.broadleafcommerce</groupId>
 			<artifactId>broadleaf-pricelist</artifactId>
 		</dependency>
 	</dependencies>
