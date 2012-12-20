@@ -30,13 +30,6 @@ INSERT INTO BLC_LOCALE (LOCALE_CODE, DEFAULT_FLAG, FRIENDLY_NAME, CURRENCY_CODE)
 INSERT INTO BLC_LOCALE (LOCALE_CODE, DEFAULT_FLAG, FRIENDLY_NAME, CURRENCY_CODE) VALUES ('es_ES', FALSE, 'Spanish (Spain)', 'EUR');
 INSERT INTO BLC_LOCALE (LOCALE_CODE, DEFAULT_FLAG, FRIENDLY_NAME, CURRENCY_CODE) VALUES ('fr_FR', FALSE,'French (France)', 'EUR');
 
---
--- Load price lists:  Your site will need to define 'price list data' populated with the prices. This demo has based
--- the price lists on currencies, but your site could use areas (zip codes, etc) to define lists.
---
-INSERT INTO BLC_PRICE_LIST (PRICE_LIST_ID,CURRENCY_CODE,FRIENDLY_NAME,PRICE_KEY,USE_DEFAULT_FLAG) VALUES (2,'EUR','EUR Dollar','EUR',false);
-INSERT INTO BLC_PRICE_LIST (PRICE_LIST_ID,CURRENCY_CODE,FRIENDLY_NAME,PRICE_KEY,USE_DEFAULT_FLAG) VALUES (3,'GBP','GB Pound','GBP',false);
-INSERT INTO BLC_PRICE_LIST (PRICE_LIST_ID,CURRENCY_CODE,FRIENDLY_NAME,PRICE_KEY,USE_DEFAULT_FLAG) VALUES (4,'MXN','Mexican Peso','MXN',false);
 
 --
 -- The following items create page templates.   The key is to map a JSP template (TMPLT_PATH) to
