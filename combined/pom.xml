@@ -251,8 +251,8 @@
             <artifactId>validation-api</artifactId>
         </dependency>
         <dependency>
-			<groupId>com.broadleafcommerce</groupId>
-			<artifactId>broadleaf-pricelist</artifactId>
+			<groupId>org.broadleafcommerce</groupId>
+			<artifactId>broadleaf-i18n</artifactId>
 		</dependency>
     </dependencies>
 </project>
