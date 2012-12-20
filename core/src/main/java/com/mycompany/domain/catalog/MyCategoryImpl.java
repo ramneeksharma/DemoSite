@@ -21,9 +21,10 @@ import org.broadleafcommerce.common.locale.util.LocaleUtil;
 import org.broadleafcommerce.common.web.BroadleafRequestContext;
 import org.broadleafcommerce.core.catalog.domain.Category;
 import org.broadleafcommerce.core.catalog.domain.CategoryImpl;
-import org.broadleafcommerce.i18n.domain.catalog.CategoryTranslation;
-import org.broadleafcommerce.i18n.domain.catalog.I18NCategory;
-import org.broadleafcommerce.i18n.domain.catalog.I18NCategoryImpl;
+
+import com.broadleafcommerce.i18n.domain.catalog.CategoryTranslation;
+import com.broadleafcommerce.i18n.domain.catalog.I18NCategory;
+import com.broadleafcommerce.i18n.domain.catalog.I18NCategoryImpl;
 
 import javax.persistence.Embedded;
 import javax.persistence.Entity;

@@ -22,9 +22,10 @@ import org.broadleafcommerce.common.locale.util.LocaleUtil;
 import org.broadleafcommerce.common.web.BroadleafRequestContext;
 import org.broadleafcommerce.core.order.domain.FulfillmentOption;
 import org.broadleafcommerce.core.order.domain.FulfillmentOptionImpl;
-import org.broadleafcommerce.i18n.domain.order.FulfillmentOptionTranslation;
-import org.broadleafcommerce.i18n.domain.order.I18NFulfillmentOption;
-import org.broadleafcommerce.i18n.domain.order.I18NFulfillmentOptionImpl;
+
+import com.broadleafcommerce.i18n.domain.order.FulfillmentOptionTranslation;
+import com.broadleafcommerce.i18n.domain.order.I18NFulfillmentOption;
+import com.broadleafcommerce.i18n.domain.order.I18NFulfillmentOptionImpl;
 
 import javax.persistence.Embedded;
 import javax.persistence.Entity;

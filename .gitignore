@@ -11,6 +11,7 @@ test-output
 *.ipr
 bin/
 site/data/
+combined/data/
 .svn
 site/solrhome
 combined/solrhome
