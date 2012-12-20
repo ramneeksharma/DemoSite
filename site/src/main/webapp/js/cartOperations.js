@@ -28,8 +28,13 @@ $(function(){
 	
 	// This will change the header "X item(s)" text to the new count and pluralization of "item"
 	function updateHeaderCartItemsCount(newCount) {
+
+        //Pull the word that was set in the html from the internationalized version from the locale
+        var singularItem = $('span#headerCartItemWordSingluar_i18n').text();
+        var plurarlItem = $('span#headerCartItemWordPlural_i18n').text();
+
 		$('.headerCartItemsCount').html(newCount);
-		$('.headerCartItemsCountWord').html((newCount == 1) ? ' item' : ' items');
+		$('.headerCartItemsCountWord').html((newCount == 1) ? singularItem: plurarlItem);
 	}
 	
 	function updateWithPromo(promo) {
@@ -135,11 +140,13 @@ $(function(){
 				type: "POST", 
 				data: $form.serialize() 
 			}, function(data, extraData) {
-				updateHeaderCartItemsCount(extraData.cartItemCount);
-				if ($form.children('input.quantityInput').val() == 0) {
-					showAddToCartButton(extraData.productId, 'cart');
-				}
-				
+				if (extraData) {
+                    updateHeaderCartItemsCount(extraData.cartItemCount);
+                    if ($form.children('input.quantityInput').val() == 0) {
+                        showAddToCartButton(extraData.productId, 'cart');
+                    }
+                }
+
 				$('.fancybox-inner').html(data);
 			}
 		);

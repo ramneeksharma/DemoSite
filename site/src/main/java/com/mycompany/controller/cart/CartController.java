@@ -32,6 +32,7 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -44,7 +45,8 @@ import java.util.Map;
 @RequestMapping("/cart")
 public class CartController extends BroadleafCartController {
 	
-	@RequestMapping("")
+	@Override
+    @RequestMapping("")
 	public String cart(HttpServletRequest request, HttpServletResponse response, Model model) throws PricingException {
 		return super.cart(request, response, model);
 	}
@@ -78,8 +80,8 @@ public class CartController extends BroadleafCartController {
 			if (e.getCause() instanceof RequiredAttributeNotProvidedException) {
 				responseMap.put("error", "allOptionsRequired");
 			} else {
-				throw e;
-			}
+                throw e;
+            }
 		}
 		
 		return responseMap;
@@ -91,7 +93,7 @@ public class CartController extends BroadleafCartController {
 	 * for the given product so that the required options may be chosen.
 	 */
 	@RequestMapping(value = "/add", produces = { "text/html", "*/*" })
-	public String add(HttpServletRequest request, HttpServletResponse response, Model model,
+	public String add(HttpServletRequest request, HttpServletResponse response, Model model, RedirectAttributes redirectAttributes,
 			@ModelAttribute("addToCartItem") AddToCartItem addToCartItem) throws IOException, PricingException, AddToCartException {
 		try {
 			return super.add(request, response, model, addToCartItem);
@@ -102,31 +104,35 @@ public class CartController extends BroadleafCartController {
 	}
 	
 	@RequestMapping("/updateQuantity")
-	public String updateQuantity(HttpServletRequest request, HttpServletResponse response, Model model,
+	public String updateQuantity(HttpServletRequest request, HttpServletResponse response, Model model, RedirectAttributes redirectAttributes,
 			@ModelAttribute("addToCartItem") AddToCartItem addToCartItem) throws IOException, PricingException, UpdateCartException, RemoveFromCartException {
-		return super.updateQuantity(request, response, model, addToCartItem);
-	}
+        return super.updateQuantity(request, response, model, addToCartItem);
+    }
 	
-	@RequestMapping("/remove")
+	@Override
+    @RequestMapping("/remove")
 	public String remove(HttpServletRequest request, HttpServletResponse response, Model model,
 			@ModelAttribute("addToCartItem") AddToCartItem addToCartItem) throws IOException, PricingException, RemoveFromCartException {
 		return super.remove(request, response, model, addToCartItem);
 	}
 	
-	@RequestMapping("/empty")
+	@Override
+    @RequestMapping("/empty")
 	public String empty(HttpServletRequest request, HttpServletResponse response, Model model) throws PricingException {
 		//return super.empty(request, response, model);
 		return "ajaxredirect:/";
 		
 	}
 	
-	@RequestMapping("/promo")
+	@Override
+    @RequestMapping("/promo")
 	public String addPromo(HttpServletRequest request, HttpServletResponse response, Model model,
 			@RequestParam("promoCode") String customerOffer) throws IOException, PricingException {
 		return super.addPromo(request, response, model, customerOffer);
 	}
 	
-	@RequestMapping("/promo/remove")
+	@Override
+    @RequestMapping("/promo/remove")
 	public String removePromo(HttpServletRequest request, HttpServletResponse response, Model model,
 			@RequestParam("offerCodeId") Long offerCodeId) throws IOException, PricingException {
 		return super.removePromo(request, response, model, offerCodeId);
