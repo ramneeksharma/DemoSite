@@ -20,15 +20,6 @@ INSERT INTO BLC_CATEGORY (CATEGORY_ID,DESCRIPTION,NAME,URL,DEFAULT_PARENT_CATEGO
 INSERT INTO BLC_CATEGORY (CATEGORY_ID,DESCRIPTION,NAME,URL,DEFAULT_PARENT_CATEGORY_ID,ACTIVE_START_DATE) VALUES (2005,'New to Hot Sauce?','New to Hot Sauce?','/new-to-hot-sauce',2,CURRENT_TIMESTAMP);
 INSERT INTO BLC_CATEGORY (CATEGORY_ID,DESCRIPTION,NAME,URL,DEFAULT_PARENT_CATEGORY_ID,ACTIVE_START_DATE) VALUES (2006,'FAQs','FAQs','/faq',2,CURRENT_TIMESTAMP);
 
--- Add SEO properties
-UPDATE BLC_CATEGORY SET META_DESCRIPTION = 'Heat Clinic Hot Sauces', META_KEYWORDS = 'hot, sauce, heat, peppers', META_ROBOT = 'INDEX,FOLLOW', TITLE_FRAGMENT = 'Hot Sauces - Broadleaf Demo - Heat Clinic' WHERE CATEGORY_ID = 2002;
-UPDATE BLC_CATEGORY SET META_DESCRIPTION = 'Heat Clinic Merchandise', META_KEYWORDS = 'hot, peppers, shirts, t-shirts, all sizes', META_ROBOT = 'INDEX,FOLLOW', TITLE_FRAGMENT = 'Merchandise - Broadleaf Demo - Heat Clinic' WHERE CATEGORY_ID = 2003;
-UPDATE BLC_CATEGORY SET META_DESCRIPTION = 'Heat Clinic Clearance Sale', META_KEYWORDS = 'clearance, sale, act now, offer', TITLE_FRAGMENT = 'Clearance - Broadleaf Demo - Heat Clinic' WHERE CATEGORY_ID = 2004;
-
--- Add Twitter properties
-UPDATE BLC_CATEGORY SET TWITTER_CARD = 'summary', TWITTER_URL = 'https://heat-clinic.com/hot-sauces', TWITTER_TITLE = 'Heat Clinic Hot Sauces', TWITTER_DESCRIPTION = 'The best hot sauces you can find', TWITTER_IMAGE = 'https://heat-clinic.com/hot.png' WHERE CATEGORY_ID = 2002;
-UPDATE BLC_CATEGORY SET TWITTER_CARD = 'summary' WHERE CATEGORY_ID = 2003;
-
 -- Builds the category hierarchy (simple in this case) - Root --> Nav --> All other categories
 INSERT INTO BLC_CATEGORY_XREF (SUB_CATEGORY_ID, CATEGORY_ID, DISPLAY_ORDER) VALUES (2,1,1)
 INSERT INTO BLC_CATEGORY_XREF (SUB_CATEGORY_ID, CATEGORY_ID, DISPLAY_ORDER) VALUES (2001,2,1);
@@ -107,11 +98,6 @@ INSERT INTO BLC_PRODUCT (PRODUCT_ID,  DEFAULT_CATEGORY_ID, URL, MANUFACTURE, IS_
 INSERT INTO BLC_PRODUCT (PRODUCT_ID,  DEFAULT_CATEGORY_ID, URL, MANUFACTURE, IS_FEATURED_PRODUCT) VALUES (400,2003,'/merchandise/heat_clinic_hand-drawn_womens','The Heat Clinic',FALSE);
 INSERT INTO BLC_PRODUCT (PRODUCT_ID,  DEFAULT_CATEGORY_ID, URL, MANUFACTURE, IS_FEATURED_PRODUCT) VALUES (500,2003,'/merchandise/heat_clinic_mascot_mens','The Heat Clinic',FALSE);
 INSERT INTO BLC_PRODUCT (PRODUCT_ID,  DEFAULT_CATEGORY_ID, URL, MANUFACTURE, IS_FEATURED_PRODUCT) VALUES (600,2003,'/merchandise/heat_clinic_mascot_womens','The Heat Clinic',FALSE);
-
--- Add SEO properties
-UPDATE BLC_PRODUCT SET META_DESCRIPTION = 'Sudden death sauce', META_KEYWORDS = 'death sauce, scoville, heat, sauce', META_ROBOT = 'INDEX,FOLLOW', TITLE_FRAGMENT = 'Sudden Death Sauce - Hot Sauces' WHERE PRODUCT_ID = 1;
-UPDATE BLC_PRODUCT SET META_DESCRIPTION = 'Sweet death sauce', META_KEYWORDS = 'sweet sauce, scoville, heat, sauce', META_ROBOT = 'INDEX,FOLLOW', TITLE_FRAGMENT = 'Sweet Death Sauce - Hot Sauces' WHERE PRODUCT_ID = 2;
-UPDATE BLC_PRODUCT SET META_DESCRIPTION = 'Hoppin hot sauce', META_KEYWORDS = 'hot sauce, scoville, heat, sauce', META_ROBOT = 'INDEX,FOLLOW', TITLE_FRAGMENT = 'Hoppin'' Hot Sauce - Hot Sauces' WHERE PRODUCT_ID = 3;
 
 ------------------------------------------------------------------------------------------------------------------
 -- Load Catalog - Step 2:  Create "default" SKUs
