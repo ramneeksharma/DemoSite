@@ -14,6 +14,7 @@
 	<context-param>
 		<param-name>patchConfigLocation</param-name>
 		<param-value>
+            classpath:/bl-seo-applicationContext.xml
             classpath:/bl-open-admin-contentClient-applicationContext.xml
             classpath:/bl-open-admin-contentCreator-applicationContext.xml
             classpath:/bl-admin-applicationContext.xml
